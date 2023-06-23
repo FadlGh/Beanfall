@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public float maxSpeed;
+    [HideInInspector] public float defaultSpeed;
     [SerializeField] private float speed;
     [SerializeField] private Vector3 gravityDirection;
     [SerializeField] private float gravityStrength;
@@ -11,23 +13,29 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        defaultSpeed = maxSpeed;
     }
 
     private void FixedUpdate()
-    {
+    { 
         float horizontalInput = Input.GetAxis("Horizontal");
         Vector2 movement = new Vector2(speed * horizontalInput, rb.velocity.y);
         rb.velocity = movement;
 
-        if(rb.velocity.sqrMagnitude < 200f)
+        if(rb.velocity.sqrMagnitude > maxSpeed)
         {
-            ApplyGravity();
+            ApplyGravity(-gravityStrength);
         }
+        else
+        {
+            ApplyGravity(gravityStrength);
+        }
+        print(rb.velocity.sqrMagnitude);
     }
 
-    private void ApplyGravity()
+    private void ApplyGravity(float amount)
     {
-        Vector2 gravity = gravityDirection.normalized * gravityStrength;
+        Vector2 gravity = gravityDirection.normalized * amount;
         rb.AddForce(gravity, ForceMode2D.Force);
     }
 }
