@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -17,12 +18,12 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void FixedUpdate()
-    { 
+    {
         float horizontalInput = Input.GetAxis("Horizontal");
         Vector2 movement = new Vector2(speed * horizontalInput, rb.velocity.y);
         rb.velocity = movement;
 
-        if(rb.velocity.sqrMagnitude > maxSpeed)
+        if (rb.velocity.sqrMagnitude > maxSpeed)
         {
             ApplyGravity(-gravityStrength);
         }
@@ -37,5 +38,19 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector2 gravity = gravityDirection.normalized * amount;
         rb.AddForce(gravity, ForceMode2D.Force);
+    }
+
+    public void ChangeSpeed(float speed)
+    {
+        StartCoroutine(ChangeSpeedCoroutine(speed));
+    }
+
+    private IEnumerator ChangeSpeedCoroutine(float speed)
+    {
+        maxSpeed = speed;
+
+        yield return new WaitForSeconds(5f);
+
+        maxSpeed = defaultSpeed;
     }
 }
