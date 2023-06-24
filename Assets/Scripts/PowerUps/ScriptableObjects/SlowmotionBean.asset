@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cb5a78941269bb4287ddb05139deaad, type: 3}
   m_Name: SlowmotionBean
   m_EditorClassIdentifier: 
-  speed: 125
+  speed: 100
