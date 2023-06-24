@@ -16,7 +16,7 @@ public class TerrainGenerator : MonoBehaviour
     {
         spawnX = playerTransform.position.x;
 
-        for (int i = 0; i < 2; i++)
+        for (int i = 0; i < 5; i++)
         {
             GameObject corridorSection = Instantiate(corridorPrefab, transform);
             corridorSection.transform.position = new Vector3(spawnX, spawnY, 0f);
@@ -27,7 +27,7 @@ public class TerrainGenerator : MonoBehaviour
 
     private void Update()
     {
-        if (playerTransform.position.y < spawnY + corridorHeight + 2f)
+        if (playerTransform.position.y < spawnY + corridorHeight + 5f)
         {
             SpawnCorridorSection();
         }

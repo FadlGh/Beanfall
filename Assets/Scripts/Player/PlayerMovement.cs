@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator ChangeSpeedCoroutine(float speed)
     {
         maxSpeed = speed;
-
+        GameObject.FindGameObjectWithTag("Slowmotion_Image").GetComponent<Animator>().SetTrigger("Slowmotion");
         yield return new WaitForSeconds(5f);
 
         maxSpeed = defaultSpeed;
