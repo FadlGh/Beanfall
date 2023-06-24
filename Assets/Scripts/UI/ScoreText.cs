@@ -8,7 +8,7 @@ public class ScoreText : MonoBehaviour
 
     void Start()
     {
-        textMeshPro  = GetComponent<TextMeshProUGUI>();
+        textMeshPro = GetComponent<TextMeshProUGUI>();
     }
 
     void Update()
