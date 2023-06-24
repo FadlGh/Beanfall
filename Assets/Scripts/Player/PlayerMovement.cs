@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
         Vector2 movement = new Vector2(speed * horizontalInput, rb.velocity.y);
         rb.velocity = movement;
 
-        if (rb.velocity.sqrMagnitude > maxSpeed)
+        if (rb.velocity.y * rb.velocity.y > maxSpeed)
         {
             ApplyGravity(-gravityStrength);
         }
@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
         {
             ApplyGravity(gravityStrength);
         }
-        print(rb.velocity.sqrMagnitude);
+        print(rb.velocity.y * rb.velocity.y);
     }
 
     private void ApplyGravity(float amount)

@@ -9,11 +9,9 @@ public class PowerUp : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        print("sssss");
         if (collision.CompareTag("Player"))
         {
             powerUpEffect.Apply(collision.gameObject);
-            print(collision.GetComponent<PlayerHealth>().health);
         }
     }
 }
