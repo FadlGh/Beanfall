@@ -13,6 +13,8 @@ public class GameMaster : MonoBehaviour
 
     public void ShowMenu()
     {
+        GameObject.FindGameObjectWithTag("AM").GetComponent<AudioManager>().Play("Lost");
+        GameObject.FindGameObjectWithTag("AM").GetComponent<AudioManager>().Stop("Background");
         LostMenu.SetActive(true);
         Time.timeScale = 0f;
     }

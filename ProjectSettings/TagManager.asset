@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Score
   - Slowmotion_Image
+  - AM
   layers:
   - Default
   - TransparentFX

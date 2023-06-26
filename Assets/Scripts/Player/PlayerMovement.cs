@@ -31,7 +31,6 @@ public class PlayerMovement : MonoBehaviour
         {
             ApplyGravity(gravityStrength);
         }
-        print(rb.velocity.y * rb.velocity.y);
     }
 
     private void ApplyGravity(float amount)
