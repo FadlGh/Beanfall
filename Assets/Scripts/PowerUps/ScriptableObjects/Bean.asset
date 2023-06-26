@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b94c025b1083b6045ba4ecedd33c31e7, type: 3}
   m_Name: Bean
   m_EditorClassIdentifier: 
+  soudName: Collect
   amount: 1

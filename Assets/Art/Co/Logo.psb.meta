@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ff4faf0c6f4fe3f4cbac18bda3a35070
+guid: 5991feb03df0d884d9b3b6690956c8a6
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -100,9 +100,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 335
-      height: 402
-    spriteID: ec39dce706aa4b74aab2ea084bfc0099
+      width: 674
+      height: 751
+    spriteID: 1e3cda2f499fa894c92b8c1db68bd27d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -111,7 +111,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -194, y: -145}
+    uvTransform: {x: 4, y: 4}
   characterData:
     bones: []
     parts: []
@@ -146,7 +146,7 @@ ScriptedImporter:
     spriteName: Layer 0
     isGroup: 0
     parentIndex: -1
-    spriteID: ec39dce706aa4b74aab2ea084bfc0099
+    spriteID: 1e3cda2f499fa894c92b8c1db68bd27d
     layerID: 2
     mosaicPosition: {x: 4, y: 4}
     flatten: 0

@@ -1108,6 +1108,12 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: Damage
+    clip: {fileID: 8300000, guid: 5fabf0e8907b4f249a03def098ff472b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &2081934859
 Transform:
   m_ObjectHideFlags: 0
