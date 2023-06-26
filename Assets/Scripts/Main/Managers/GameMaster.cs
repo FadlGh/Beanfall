@@ -9,6 +9,7 @@ public class GameMaster : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1f;
+        GameObject.FindGameObjectWithTag("AM").GetComponent<AudioManager>().Play("Background");
     }
 
     public void ShowMenu()
